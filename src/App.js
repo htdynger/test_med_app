@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Импорт пользовательского компонента Navbar
 import Navbar from './components/Navbar/Navbar';
 import Landing_page from './components/Landing_Page/LandingPage';
+import SignUp from './components/Sign_Up/SignUp';
+import Login from './components/Login/Login';
 // Функциональный компонент для основного приложения
 function App() {
 
@@ -21,7 +23,8 @@ function App() {
           {/* Настройка маршрутов для различных страниц */}
           <Routes>
             <Route path='/' element={<Landing_page />} />
-            {/* Определение отдельных компонентов Route для различных страниц */}
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<SignUp />} />
           </Routes>
         </BrowserRouter>
     </div>
