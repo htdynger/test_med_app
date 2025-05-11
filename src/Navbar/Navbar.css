@@ -1,0 +1,154 @@
+nav {
+    padding: 1.5rem;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+}
+/* Стилизация выпадающего меню */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    min-width: 120px;
+    padding: 8px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+/* Стилизация приветственного сообщения для пользователя */
+.welcome-user {
+    position: relative;
+    cursor: pointer;
+}
+/* Отображение выпадающего меню при наведении */
+.welcome-user:hover .dropdown-menu {
+    display: block;
+}
+/* Стилизация элементов в выпадающем меню */
+.dropdown-menu li {
+    display: block;
+    width: 150px;
+    padding:5px;
+}
+/* Стилизация ссылок в выпадающем меню */
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+/* Эффект наведения для ссылок в выпадающем меню */
+.dropdown-menu li a:hover {
+    color: #2190ff;
+}
+/* Стилизация логотипа в навигационной панели */
+.nav__logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d213f;
+    cursor: pointer;
+}
+/* Стилизация спана внутри логотипа */
+.nav__logo span {
+    color: #3685fb;
+}
+/* Стилизация иконки в навигационной панели */
+.nav__icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* Стилизация навигационных ссылок */
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* Стилизация отдельных ссылок в навигации */
+.link a {
+    padding: 0 1rem;
+    color: #0d213f;
+    transition: 0.3s;
+}
+/* Эффект наведения для отдельных ссылок в навигации */
+.link a:hover {
+    color: #3685fb;
+}
+/* Медиа-запросы для адаптивности на мобильных устройствах */
+@media (max-width: 768px) {
+    .nav__logo {
+        margin-right: auto;
+    }
+    .nav__icon {
+        display: block;
+    }
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .nav__links.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        animation: slideDown 0.5s ease-in-out; /* Эффект анимации */
+    }
+}
+/* Ключевые кадры для анимации спуска */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Стили для кнопок */
+.btn1 {
+    border: 2px solid #3685fb;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+}
+.btn1:hover {
+    background-color: #3685fb; /* Эффект наведения */
+    color: white; /* Эффект наведения */
+}
+.btn2 {
+    border: 2px solid #3685fb;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    height:30px;
+    display:flex; /* Выравнивание элементов и обоснование содержимого */
+    align-items:center; /* Выравнивание элементов и обоснование содержимого */
+    justify-content:center; /* Выравнивание элементов и обоснование содержимого */
+    margin-top:3px; /* Отступ сверху */
+}
+.btn2:hover {
+    background-color:#3685fb; /* Эффект наведения */
+    color:white; /* Эффект наведения */
+}
